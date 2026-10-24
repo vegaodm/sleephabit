@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index">
+<meta name="theme-color" content="#4f46e5">
+<title>Support · SleepHabit</title>
+<meta name="description" content="Help with SleepHabit: logging nights, understanding insights, the one-time unlock, backups, reminders and how to reach us.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f7f7fb;
+    --card: #ffffff;
+    --ink: #16161d;
+    --muted: #5c5c6e;
+    --line: #e4e4ee;
+    --accent: #4f46e5;
+    --accent-soft: #eef0ff;
+    --code: #f2f2f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f0f14;
+      --card: #17171f;
+      --ink: #f2f2f7;
+      --muted: #a1a1b3;
+      --line: #2a2a36;
+      --accent: #a5b4fc;
+      --accent-soft: #1e1e2e;
+      --code: #20202b;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+          "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    padding: 0 20px 64px;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; }
+  header.site {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    align-items: center; justify-content: space-between;
+    padding: 22px 0 18px; border-bottom: 1px solid var(--line); margin-bottom: 28px;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 650; letter-spacing: -0.01em; }
+  .brand svg { width: 22px; height: 22px; color: var(--accent); }
+  nav.top { display: flex; gap: 6px; flex-wrap: wrap; }
+  nav.top a {
+    color: var(--muted); text-decoration: none; font-size: 14px;
+    padding: 6px 11px; border-radius: 999px; border: 1px solid var(--line);
+  }
+  nav.top a:hover, nav.top a:focus-visible { color: var(--ink); border-color: var(--accent); }
+  nav.top a[aria-current="page"] { color: var(--accent); border-color: var(--accent); }
+  h1 { font-size: 1.9rem; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 10px; }
+  .meta { color: var(--muted); font-size: 0.9rem; margin: 0 0 26px; }
+  h2 { font-size: 1.18rem; letter-spacing: -0.01em; margin: 40px 0 6px; }
+  p, li { color: var(--ink); }
+  ul, ol { padding-left: 22px; }
+  li { margin: 5px 0; }
+  a { color: var(--accent); }
+  .lede {
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+    padding: 18px 20px; margin: 0;
+  }
+  .lede p { margin: 0 0 8px; }
+  .lede p:last-child { margin-bottom: 0; }
+  .lede .mail { font-size: 1.15rem; font-weight: 650; letter-spacing: -0.01em; }
+  code {
+    background: var(--code); border-radius: 6px; padding: 1px 6px;
+    font-size: 0.88em; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  details.faq {
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    padding: 0 16px; margin: 10px 0;
+  }
+  details.faq > summary {
+    cursor: pointer; padding: 14px 0; font-weight: 600; color: var(--ink);
+    list-style: none; display: flex; align-items: baseline; gap: 12px;
+  }
+  details.faq > summary::-webkit-details-marker { display: none; }
+  details.faq > summary::after {
+    content: "+"; margin-left: auto; color: var(--accent);
+    font-weight: 700; font-size: 1.1rem; line-height: 1;
+  }
+  details.faq[open] > summary::after { content: "–"; }
+  details.faq > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 6px; }
+  details.faq .answer { padding: 0 0 16px; }
+  details.faq .answer > :first-child { margin-top: 0; }
+  details.faq .answer > :last-child { margin-bottom: 0; }
+  .note {
+    border-left: 3px solid var(--accent); background: var(--accent-soft);
+    border-radius: 0 10px 10px 0; padding: 12px 16px; margin: 16px 0;
+  }
+  .note p { margin: 0; }
+  .steps { counter-reset: step; list-style: none; padding-left: 0; }
+  .steps li {
+    counter-increment: step; position: relative; padding-left: 40px; margin: 12px 0;
+  }
+  .steps li::before {
+    content: counter(step); position: absolute; left: 0; top: 0;
+    width: 26px; height: 26px; border-radius: 50%;
+    background: var(--accent-soft); color: var(--accent);
+    font-size: 0.85rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .contact { font-weight: 600; }
+  footer {
+    max-width: 780px; margin: 56px auto 0; padding-top: 20px;
+    border-top: 1px solid var(--line); color: var(--muted); font-size: 0.86rem;
+    display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: space-between;
+  }
+  footer a { color: var(--muted); }
+  footer a:hover { color: var(--ink); }
+  @media (max-width: 520px) { h1 { font-size: 1.6rem; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+        <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" stroke-linejoin="round"/>
+      </svg>
+      <span>SleepHabit</span>
+    </div>
+    <nav class="top" aria-label="Site">
+      <a href="index.html">Privacy</a>
+      <a href="support.html" aria-current="page">Support</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Support</h1>
+    <p class="meta">SleepHabit for iPhone · Version 1.0</p>
+
+    <div class="lede">
+      <p><strong>Need a hand?</strong> Email us — a real person reads every message, usually within two
+      business days.</p>
+      <p class="mail"><a href="mailto:vegaodm@outlook.com?subject=SleepHabit%20support">vegaodm@outlook.com</a></p>
+      <p class="meta" style="margin:8px 0 0">To help us answer faster, include your iOS version, the app
+      version (Settings → About), and what you expected to happen versus what did.</p>
+    </div>
+
+    <h2>Getting started</h2>
+    <ol class="steps">
+      <li><strong>Log last night.</strong> On the Today tab, tap <em>Add last night</em>. Set when you went
+      to bed and when you woke, how many times you woke, and your energy from Wiped to Great.</li>
+      <li><strong>Tag the day before.</strong> Tap any of caffeine, alcohol, exercise, stress, screens or nap,
+      then pick roughly when it happened — morning, afternoon, evening, or within 2h of bed. Timing matters:
+      coffee at 3pm and coffee at 11pm are not the same night.</li>
+      <li><strong>Come back tomorrow.</strong> Insights appear once your log clears the sample gate on both
+      sides of a comparison. Keep logging; the app stays quiet until the data is strong enough to mean
+      something.</li>
+    </ol>
+
+    <h2>Logging</h2>
+
+    <details class="faq">
+      <summary>Can I fill in nights I missed?</summary>
+      <div class="answer">
+        <p>Yes. When you create an entry, tap <em>Night of</em> and pick the date. You can backfill nights
+        going back years, and the app will use them immediately in later insights.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>How do I edit or delete a night?</summary>
+      <div class="answer">
+        <p>Tap the card on the Today tab, or open the night from the History tab, and change whatever you
+        need. To delete, swipe left on the row in History, or use the Delete section at the bottom of the
+        entry.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>What does each tag mean?</summary>
+      <div class="answer">
+        <p>Tags describe the waking day <em>before</em> the night, not the night itself.</p>
+        <ul>
+          <li><strong>Caffeine</strong> — coffee, tea, energy drinks, pre-workout.</li>
+          <li><strong>Alcohol</strong> — any alcoholic drink.</li>
+          <li><strong>Exercise</strong> — a workout or anything you would call exercise.</li>
+          <li><strong>Stress</strong> — a demanding or tense day, work or personal.</li>
+          <li><strong>Screens</strong> — phone, laptop or TV late in the day.</li>
+          <li><strong>Nap</strong> — daytime sleep.</li>
+        </ul>
+        <p>You can tag the same factor in more than one time bucket in a single day.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Why is my bedtime listed as the previous day?</summary>
+      <div class="answer">
+        <p>A "night" is labelled by the morning you woke up. If you went to bed at 1:20am on Saturday and woke
+        at 8am, that is Saturday's entry — the app handles the after-midnight bedtime for you.</p>
+      </div>
+    </details>
+
+    <h2>Insights</h2>
+
+    <details class="faq">
+      <summary>Why don't I see any insights yet?</summary>
+      <div class="answer">
+        <p>Insights only appear when there is enough data on both sides of a comparison and the difference is
+        big enough to be meaningful. If the gap is thin, showing nothing is the honest answer.</p>
+        <ul>
+          <li><strong>Free:</strong> 7-day window, at least 3 nights with the factor and 3 without, and at
+          least 5 nights logged.</li>
+          <li><strong>Unlocked:</strong> 14 / 30 / 90 / 365 days or all time, at least 5 nights with and 5
+          without, and at least 14 nights logged.</li>
+          <li><strong>Effect floor:</strong> 15 minutes of sleep timing, 0.5 night wakings or 0.3 energy
+          points.</li>
+        </ul>
+        <p>Keep logging. The Insights tab tells you which factor is closest to unlocking next.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>What exactly is being compared?</summary>
+      <div class="answer">
+        <p>Averages of your own nights, grouped by whether the factor was present. For example: average time
+        to fall asleep on nights with caffeine within 2h of bed versus nights without it, or versus nights
+        where caffeine happened in the afternoon. The app also counts how often something happens — "you
+        logged alcohol on 12 of 30 nights, and woke at least once on 9 of them."</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Are these results proof that something causes bad sleep?</summary>
+      <div class="answer">
+        <p>No. They are associations in your own data — correlation, not causation. Something that shows up
+        together may share another cause, and small samples move around. SleepHabit is not a medical device
+        and does not diagnose or treat anything; for a real sleep problem, see a clinician.</p>
+      </div>
+    </details>
+
+    <h2>The one-time unlock</h2>
+
+    <details class="faq">
+      <summary>What does the purchase include?</summary>
+      <div class="answer">
+        <p>Logging and your full history are free, forever. A single purchase unlocks the long view: insight
+        windows of 14, 30, 90 and 365 days, all-time comparisons, and the complete ranked list of findings
+        rather than the top five. It is a one-time purchase — there is no subscription and nothing renews.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>How much is it?</summary>
+      <div class="answer">
+        <p>US$6.99, or the equivalent in your storefront (¥48 in China mainland). The exact price is always
+        shown on the paywall and on the App Store product page, in your local currency, before you confirm.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>I bought it before. How do I get it back?</summary>
+      <div class="answer">
+        <p>Settings → <em>Restore purchase</em>. The unlock belongs to your Apple Account, so restoring on a
+        new device with the same account works. If nothing happens, check that you are signed in to the App
+        Store with the account you bought it on, then try again with a network connection.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Can I get a refund?</summary>
+      <div class="answer">
+        <p>Refunds are handled by Apple, not by us: visit
+        <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>, sign in, and choose the
+        purchase. We cannot issue or reverse App Store payments.</p>
+      </div>
+    </details>
+
+    <h2>Your data</h2>
+
+    <details class="faq">
+      <summary>Where is my data stored?</summary>
+      <div class="answer">
+        <p>Only on your iPhone, inside the app. There is no account and no server, so nothing is uploaded and
+        we cannot see your log. See the <a href="index.html">privacy policy</a> for the full detail.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>How do I back up or move to a new phone?</summary>
+      <div class="answer">
+        <p>Settings → <em>Export backup</em> creates a JSON file and opens the share sheet; save it to Files,
+        iCloud Drive or anywhere you trust. On the new phone, install SleepHabit, then Settings →
+        <em>Import backup</em> and pick that file.</p>
+        <p>Importing <strong>replaces</strong> everything currently in the app — it is a restore, not a merge —
+        and the app asks you to confirm before it writes anything. A file that fails validation is rejected
+        and your existing data is left untouched.</p>
+        <p>If you use iCloud Backup or a computer backup, the app's data may also be included in that device
+        backup, handled by iOS.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>How do I delete everything?</summary>
+      <div class="answer">
+        <p>Delete individual nights from History, or delete the app to remove all entries and settings at once.
+        Because nothing is stored on a server, deletion is immediate and there is no copy left for us to
+        erase. Export a backup first if you might want the data later.</p>
+      </div>
+    </details>
+
+    <h2>Reminders</h2>
+
+    <details class="faq">
+      <summary>When does the reminder fire?</summary>
+      <div class="answer">
+        <p>By default at 8:30am, and you can change the time or switch it off in Settings. The app schedules a
+        week of one-time reminders that skip any night you have already logged, so it stops nagging once your
+        entry is in.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>I'm not getting notifications.</summary>
+      <div class="answer">
+        <p>Check three things: the toggle is on in SleepHabit's Settings; notifications are allowed for
+        SleepHabit in iOS Settings → Notifications; and a Focus mode or Do Not Disturb is not holding them
+        back. If permission was declined earlier, re-enable it in iOS Settings and the app will pick it up the
+        next time it schedules.</p>
+      </div>
+    </details>
+
+    <h2>Troubleshooting</h2>
+
+    <details class="faq">
+      <summary>The Save button is greyed out.</summary>
+      <div class="answer">
+        <p>Save stays disabled while the entry is invalid. The usual causes: the wake time is earlier than or
+        too close to bedtime (a night must be at least an hour), or the note is over 280 characters. The form
+        shows which rule is failing.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>I reinstalled the app and my history is gone.</summary>
+      <div class="answer">
+        <p>Deleting an app removes its local data, which is the trade-off of keeping everything on-device. If
+        you exported a backup, import it from Settings. If you had iCloud Backup enabled, restoring the device
+        backup may bring the app's data back.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Does SleepHabit need internet?</summary>
+      <div class="answer">
+        <p>No. Logging, history and insights all work offline. The only network use is StoreKit when you buy or
+        restore the unlock.</p>
+      </div>
+    </details>
+
+    <h2>Still stuck?</h2>
+    <p>Email <a href="mailto:vegaodm@outlook.com?subject=SleepHabit%20support">vegaodm@outlook.com</a> with
+    your iOS version, the app version from Settings → About, and a short description of the problem. Bug
+    reports and feature requests are both welcome.</p>
+    <p class="contact">We read everything, and we answer.</p>
+  </main>
+
+  <footer>
+    <span>SleepHabit · Find what's wrecking your sleep.</span>
+    <span><a href="index.html">Privacy Policy</a> · <a href="mailto:vegaodm@outlook.com">Contact</a></span>
+  </footer>
+</div>
+</body>
+</html>
