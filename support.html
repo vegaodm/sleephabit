@@ -136,7 +136,7 @@
 
   <main>
     <h1>Support</h1>
-    <p class="meta">SleepHabit for iPhone · Version 1.0</p>
+    <p class="meta">SleepHabit for iPhone · Version 1.0.1</p>
 
     <div class="lede">
       <p><strong>Need a hand?</strong> Email us — a real person reads every message, usually within two
@@ -198,6 +198,46 @@
       <div class="answer">
         <p>A "night" is labelled by the morning you woke up. If you went to bed at 1:20am on Saturday and woke
         at 8am, that is Saturday's entry — the app handles the after-midnight bedtime for you.</p>
+      </div>
+    </details>
+
+    <h2>Widget</h2>
+
+    <details class="faq">
+      <summary>How does the widget work?</summary>
+      <div class="answer">
+        <p>Add the SleepHabit widget to your Home Screen, tap <em>Start</em> when you get into bed and
+        <em>Stop</em> when you wake up. The widget only remembers those two times; the next time you open the
+        app it turns them into a night for you.</p>
+        <p>The small and medium sizes are supported. If you leave the night running, the widget switches to
+        <em>Still in bed?</em> after 16 hours rather than counting forever.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>The widget recorded a night but I can't see it</summary>
+      <div class="answer">
+        <p>The app drops a widget night in four cases, rather than writing something it cannot vouch for:</p>
+        <ul>
+          <li>you had already logged that night by hand — your entry is never overwritten by the widget;</li>
+          <li>the session was shorter than an hour;</li>
+          <li><em>Start</em> was tapped after 6am, which is a wake-up rather than a bedtime;</li>
+          <li>you recorded two nights from the widget without opening the app in between — only the later
+          one is kept.</li>
+        </ul>
+        <p>A session left running past 16 hours is filed as a 16-hour night and labelled as capped, so check
+        the times on the card afterwards. If a saved night is still waiting to be confirmed, Today shows a
+        <em>not saved yet</em> card with a retry button.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Why does the widget's night say energy 3 with 0 wakings?</summary>
+      <div class="answer">
+        <p>The widget can only know when you got into bed and when you woke, so it fills in the middle of the
+        scale and asks you to correct it. Tap the night on the Today tab — the card says
+        <em>From the widget — confirm energy and tags</em> — and set how you actually felt and what you did
+        the day before.</p>
       </div>
     </details>
 
@@ -287,7 +327,9 @@
       <summary>Where is my data stored?</summary>
       <div class="answer">
         <p>Only on your iPhone, inside the app. There is no account and no server, so nothing is uploaded and
-        we cannot see your log. See the <a href="index.html">privacy policy</a> for the full detail.</p>
+        we cannot see your log. The Home Screen widget keeps the start and stop times of a night in a small
+        container that the app and the widget share on the same device — nothing more. See the
+        <a href="index.html">privacy policy</a> for the full detail.</p>
       </div>
     </details>
 
