@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index">
+<meta name="theme-color" content="#4f46e5">
+<title>Assistance · SleepHabit</title>
+<meta name="description" content="Aide pour SleepHabit : saisir les nuits, comprendre les analyses, l'achat unique, les sauvegardes, les rappels et comment nous joindre.">
+<link rel="alternate" hreflang="en" href="https://vegaodm.github.io/sleephabit/support.html">
+<link rel="alternate" hreflang="de" href="https://vegaodm.github.io/sleephabit/support.de.html">
+<link rel="alternate" hreflang="fr" href="https://vegaodm.github.io/sleephabit/support.fr.html">
+<link rel="alternate" hreflang="x-default" href="https://vegaodm.github.io/sleephabit/support.html">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f7f7fb;
+    --card: #ffffff;
+    --ink: #16161d;
+    --muted: #5c5c6e;
+    --line: #e4e4ee;
+    --accent: #4f46e5;
+    --accent-soft: #eef0ff;
+    --code: #f2f2f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f0f14;
+      --card: #17171f;
+      --ink: #f2f2f7;
+      --muted: #a1a1b3;
+      --line: #2a2a36;
+      --accent: #a5b4fc;
+      --accent-soft: #1e1e2e;
+      --code: #20202b;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+          "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    padding: 0 20px 64px;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; }
+  header.site {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    align-items: center; justify-content: space-between;
+    padding: 22px 0 18px; border-bottom: 1px solid var(--line); margin-bottom: 28px;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 650; letter-spacing: -0.01em; }
+  .brand svg { width: 22px; height: 22px; color: var(--accent); }
+  nav.top { display: flex; gap: 6px; flex-wrap: wrap; }
+  nav.top a {
+    color: var(--muted); text-decoration: none; font-size: 14px;
+    padding: 6px 11px; border-radius: 999px; border: 1px solid var(--line);
+  }
+  nav.top a:hover, nav.top a:focus-visible { color: var(--ink); border-color: var(--accent); }
+  nav.top a[aria-current="page"] { color: var(--accent); border-color: var(--accent); }
+  .navrow { display: flex; gap: 6px 8px; flex-wrap: wrap; align-items: center; }
+  nav.top.langs a { font-size: 13px; }
+  h1 { font-size: 1.9rem; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 10px; }
+  .meta { color: var(--muted); font-size: 0.9rem; margin: 0 0 26px; }
+  h2 { font-size: 1.18rem; letter-spacing: -0.01em; margin: 40px 0 6px; }
+  p, li { color: var(--ink); }
+  ul, ol { padding-left: 22px; }
+  li { margin: 5px 0; }
+  a { color: var(--accent); }
+  .lede {
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+    padding: 18px 20px; margin: 0;
+  }
+  .lede p { margin: 0 0 8px; }
+  .lede p:last-child { margin-bottom: 0; }
+  .lede .mail { font-size: 1.15rem; font-weight: 650; letter-spacing: -0.01em; }
+  code {
+    background: var(--code); border-radius: 6px; padding: 1px 6px;
+    font-size: 0.88em; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  details.faq {
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    padding: 0 16px; margin: 10px 0;
+  }
+  details.faq > summary {
+    cursor: pointer; padding: 14px 0; font-weight: 600; color: var(--ink);
+    list-style: none; display: flex; align-items: baseline; gap: 12px;
+  }
+  details.faq > summary::-webkit-details-marker { display: none; }
+  details.faq > summary::after {
+    content: "+"; margin-left: auto; color: var(--accent);
+    font-weight: 700; font-size: 1.1rem; line-height: 1;
+  }
+  details.faq[open] > summary::after { content: "–"; }
+  details.faq > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 6px; }
+  details.faq .answer { padding: 0 0 16px; }
+  details.faq .answer > :first-child { margin-top: 0; }
+  details.faq .answer > :last-child { margin-bottom: 0; }
+  .note {
+    border-left: 3px solid var(--accent); background: var(--accent-soft);
+    border-radius: 0 10px 10px 0; padding: 12px 16px; margin: 16px 0;
+  }
+  .note p { margin: 0; }
+  .steps { counter-reset: step; list-style: none; padding-left: 0; }
+  .steps li {
+    counter-increment: step; position: relative; padding-left: 40px; margin: 12px 0;
+  }
+  .steps li::before {
+    content: counter(step); position: absolute; left: 0; top: 0;
+    width: 26px; height: 26px; border-radius: 50%;
+    background: var(--accent-soft); color: var(--accent);
+    font-size: 0.85rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .contact { font-weight: 600; }
+  footer {
+    max-width: 780px; margin: 56px auto 0; padding-top: 20px;
+    border-top: 1px solid var(--line); color: var(--muted); font-size: 0.86rem;
+    display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: space-between;
+  }
+  footer a { color: var(--muted); }
+  footer a:hover { color: var(--ink); }
+  @media (max-width: 520px) { h1 { font-size: 1.6rem; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+        <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" stroke-linejoin="round"/>
+      </svg>
+      <span>SleepHabit</span>
+    </div>
+    <div class="navrow">
+      <nav class="top" aria-label="Site">
+        <a href="support.fr.html" aria-current="page">Assistance</a>
+        <a href="index.fr.html">Confidentialité</a>
+      </nav>
+      <nav class="top langs" aria-label="Langue">
+        <a href="support.html" lang="en" hreflang="en">English</a>
+        <a href="support.de.html" lang="de" hreflang="de">Deutsch</a>
+        <a href="support.fr.html" lang="fr" hreflang="fr" aria-current="page">Français</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Assistance</h1>
+    <p class="meta">SleepHabit pour iPhone · Version 1.0.4</p>
+
+    <div class="lede">
+      <p><strong>Besoin d'un coup de main ?</strong> Écrivez-nous : une vraie personne lit chaque message,
+      généralement sous deux jours ouvrés.</p>
+      <p class="mail"><a href="mailto:vegaodm@outlook.com?subject=SleepHabit%20support">vegaodm@outlook.com</a></p>
+      <p class="meta" style="margin:8px 0 0">Pour nous aider à répondre plus vite : votre version d'iOS, la
+      version de l'app (Réglages → À propos) et ce que vous attendiez par rapport à ce qui s'est passé.</p>
+    </div>
+
+    <h2>Premiers pas</h2>
+    <ol class="steps">
+      <li><strong>Saisissez la nuit dernière.</strong> Dans l'onglet « Aujourd'hui », touchez <em>Ajouter la
+      nuit dernière</em>. Indiquez l'heure du coucher, l'heure du lever, le nombre de réveils et votre énergie,
+      de Fatigué à Excellent.</li>
+      <li><strong>Marquez la journée d'avant.</strong> Touchez caféine, alcool, sport, stress, écrans ou sieste,
+      puis choisissez à peu près le moment — matin, après-midi, soir ou juste avant le coucher. L'heure
+      compte : un café à 15 h et un café à 23 h ne font pas la même nuit.</li>
+      <li><strong>Revenez demain.</strong> Les analyses apparaissent quand votre journal atteint le seuil des
+      deux côtés d'une comparaison. Continuez à saisir : l'app reste muette tant que les données ne sont pas
+      assez solides pour signifier quelque chose.</li>
+    </ol>
+
+    <h2>Saisie</h2>
+
+    <details class="faq">
+      <summary>Puis-je saisir des nuits que j'ai oubliées ?</summary>
+      <div class="answer">
+        <p>Oui. Quand vous créez une nuit, touchez <em>Nuit du</em> et choisissez la date. Vous pouvez remonter
+        des années en arrière, et l'app les utilisera aussitôt dans les analyses suivantes.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Comment modifier ou supprimer une nuit ?</summary>
+      <div class="answer">
+        <p>Touchez la carte dans l'onglet « Aujourd'hui », ou ouvrez la nuit depuis l'onglet « Historique », et
+        changez ce qu'il faut. Pour supprimer, balayez la ligne vers la gauche dans l'historique, ou utilisez la
+        section « Supprimer » en bas de la nuit.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Que signifie chaque facteur ?</summary>
+      <div class="answer">
+        <p>Les facteurs décrivent la journée éveillée <em>avant</em> la nuit, pas la nuit elle-même.</p>
+        <ul>
+          <li><strong>Caféine</strong> — café, thé, boissons énergisantes, pré-entraînement.</li>
+          <li><strong>Alcool</strong> — toute boisson alcoolisée.</li>
+          <li><strong>Sport</strong> — une séance ou tout ce que vous appelleriez du sport.</li>
+          <li><strong>Stress</strong> — une journée exigeante ou tendue, au travail ou à la maison.</li>
+          <li><strong>Écrans</strong> — téléphone, ordinateur ou télévision tard dans la journée.</li>
+          <li><strong>Sieste</strong> — le sommeil de jour.</li>
+        </ul>
+        <p>Vous pouvez marquer le même facteur à plusieurs moments de la journée le même jour.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Pourquoi mon heure de coucher est-elle datée de la veille ?</summary>
+      <div class="answer">
+        <p>Une nuit porte la date du matin où vous vous êtes réveillé. Si vous vous êtes couché à 1 h 20 le
+        samedi et réveillé à 8 h, c'est la nuit du samedi — l'app gère pour vous le coucher après minuit.</p>
+      </div>
+    </details>
+
+    <h2>Widget</h2>
+
+    <details class="faq">
+      <summary>Comment fonctionne le widget ?</summary>
+      <div class="answer">
+        <p>Ajoutez le widget SleepHabit à l'écran d'accueil, touchez <em>Démarrer</em> au coucher et
+        <em>Arrêter</em> au réveil. Le widget ne retient que ces deux heures ; à la prochaine ouverture, l'app
+        en fait une nuit pour vous.</p>
+        <p>Les tailles petite et moyenne sont prises en charge. Si vous laissez la nuit tourner, le widget passe
+        à <em>Toujours au lit ?</em> au bout de 16 heures plutôt que de compter indéfiniment.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Le widget a enregistré une nuit mais je ne la vois pas</summary>
+      <div class="answer">
+        <p>L'app écarte une nuit du widget dans quatre cas, plutôt que d'écrire quelque chose qu'elle ne peut pas
+        garantir :</p>
+        <ul>
+          <li>vous aviez déjà noté cette nuit à la main — votre nuit n'est jamais écrasée par le widget ;</li>
+          <li>la session a duré moins d'une heure ;</li>
+          <li><em>Démarrer</em> a été touché après 6 h, ce qui est un réveil et non un coucher ;</li>
+          <li>vous avez enregistré deux nuits depuis le widget sans ouvrir l'app entre les deux — seule la plus
+          récente est conservée.</li>
+        </ul>
+        <p>Une session laissée plus de 16 heures est classée comme nuit de 16 heures et signalée comme tronquée :
+        vérifiez les heures sur la carte ensuite. Si une nuit enregistrée attend encore d'être confirmée,
+        « Aujourd'hui » affiche une carte <em>Pas encore enregistrée</em> avec un bouton pour réessayer.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Pourquoi la nuit du widget indique-t-elle énergie 3 et 0 réveil ?</summary>
+      <div class="answer">
+        <p>Le widget ne peut savoir que l'heure du coucher et celle du réveil : il remplit donc le milieu de
+        l'échelle et vous demande de corriger. Touchez la nuit dans l'onglet « Aujourd'hui » — la carte indique
+        <em>Depuis le widget — confirmez l'énergie et les tags</em> — et indiquez ce que vous avez réellement
+        ressenti et ce que vous avez fait la veille.</p>
+      </div>
+    </details>
+
+    <h2>Historique et tendance du sommeil</h2>
+
+    <details class="faq">
+      <summary>Où est le graphique de tendance ?</summary>
+      <div class="answer">
+        <p>L'onglet « Historique » commence par une ligne <em>30 dernières nuits</em> qui montre votre durée de
+        sommeil sous forme de petite courbe. Touchez-la : la même courbe s'ouvre en plein écran, avec un
+        sélecteur pour la durée, l'heure du coucher, les réveils ou l'énergie, et des périodes de 30 jours,
+        90 jours, un an ou toute la période.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Comment zoomer, et comment lire une seule nuit ?</summary>
+      <div class="answer">
+        <p>Pincez le graphique pour zoomer sur quelques semaines. L'échelle verticale ne bouge pas : les hauteurs
+        gardent donc leur sens après le zoom. Pendant que vous êtes zoomé, une fine bande sous le tracé montre
+        où se situe la partie visible dans la période entière ; faites glisser la bande pour la déplacer.</p>
+        <p>Appuyez longuement n'importe où sur la courbe : le graphique choisit la nuit la plus proche avec sa
+        date, sa valeur, et les réveils, l'énergie et les facteurs que vous avez notés. La carte reste un instant
+        après que vous relâchez, le temps de lire le chiffre. Double-touchez le graphique, ou touchez
+        <em>Réinitialiser le zoom</em>, pour tout réafficher.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Pourquoi la courbe devient-elle des points hebdomadaires ?</summary>
+      <div class="answer">
+        <p>Au-delà d'environ trois mois de nuits, un point par nuit devient un fouillis plutôt qu'une forme :
+        le graphique moyenne donc chaque semaine en un seul point — la moyenne des nuits que vous avez
+        réellement notées cette semaine-là. Appuyez sur un point hebdomadaire et la carte indique combien de
+        nuits il couvre.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>La tendance fait-elle partie du déblocage ?</summary>
+      <div class="answer">
+        <p>Non. Le graphique de tendance est gratuit sur les deux niveaux, sur toutes les périodes, car il ne
+        redessine que des nuits que vous avez déjà notées. L'achat porte sur la comparaison entre nuits
+        marquées et nuits sans facteur — c'est l'onglet « Analyses ». Votre historique et la tendance restent
+        gratuits pour toujours.</p>
+      </div>
+    </details>
+
+    <h2>Analyses</h2>
+
+    <details class="faq">
+      <summary>Pourquoi je ne vois encore aucune analyse ?</summary>
+      <div class="answer">
+        <p>Les analyses n'apparaissent que s'il y a assez de données des deux côtés d'une comparaison et si
+        l'écart est assez grand pour compter. Si l'écart est mince, ne rien afficher est la réponse honnête.</p>
+        <ul>
+          <li><strong>Gratuit :</strong> période de 14 jours (7 jours aussi possible), au moins 3 nuits avec le
+          facteur et 3 sans, et au moins 5 nuits notées.</li>
+          <li><strong>Débloqué :</strong> 30 / 90 / 365 jours ou toute la période, au moins 5 nuits avec et 5
+          sans, et au moins 14 nuits notées.</li>
+          <li><strong>Seuil d'effet :</strong> 15 minutes de décalage, 0,5 réveil nocturne ou 0,3 point
+          d'énergie.</li>
+        </ul>
+        <p>Un piège structurel : si vous marquez la même chose chaque soir, il n'existe pas de groupe « sans »
+        auquel comparer, donc ce facteur ne peut produire qu'une information de fréquence — et une comparaison
+        horaire, si vous le marquez à des moments différents selon les nuits.</p>
+        <p>Continuez à saisir. L'onglet « Analyses » vous dit quel facteur est le plus proche du déblocage.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Qu'est-ce qui est comparé exactement ?</summary>
+      <div class="answer">
+        <p>Des moyennes de vos propres nuits, groupées selon la présence du facteur. Par exemple : l'heure
+        d'endormissement moyenne les nuits avec caféine juste avant le coucher, contre les nuits sans — ou
+        contre les nuits où la caféine était l'après-midi. L'app compte aussi la fréquence : « vous avez noté de
+        l'alcool 12 nuits sur 30, et vous vous êtes réveillé au moins une fois lors de 9 d'entre elles ».</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Ces résultats prouvent-ils que quelque chose cause un mauvais sommeil ?</summary>
+      <div class="answer">
+        <p>Non. Ce sont des associations dans vos propres données — corrélation, pas causalité. Deux choses qui
+        vont ensemble peuvent partager une autre cause, et de petits échantillons varient. SleepHabit n'est pas
+        un dispositif médical et ne diagnostique ni ne traite quoi que ce soit ; pour un vrai problème de
+        sommeil, voyez un professionnel de santé.</p>
+      </div>
+    </details>
+
+    <h2>L'achat unique</h2>
+
+    <details class="faq">
+      <summary>Que comprend l'achat ?</summary>
+      <div class="answer">
+        <p>La saisie et votre historique complet sont gratuits, pour toujours, et les analyses des 14 derniers
+        jours le sont aussi (7 jours est également possible). Un paiement unique ouvre la vue longue : des
+        fenêtres de 30, 90 et 365 jours plus toute la période, calculées sur toutes les nuits que vous avez
+        notées. Quelle que soit la fenêtre ouverte, vous pouvez la déplier en liste complète sur les deux
+        niveaux — l'achat ajoute de l'historique à comparer, pas des lignes par fenêtre. C'est un paiement
+        unique : pas d'abonnement, rien ne se renouvelle.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Combien ça coûte ?</summary>
+      <div class="answer">
+        <p>6,99 $ US, ou l'équivalent dans votre boutique (48 ¥ en Chine continentale). Le prix exact s'affiche
+        toujours sur l'écran d'achat et sur la fiche App Store, dans votre devise, avant que vous confirmiez.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Je l'ai acheté avant. Comment le récupérer ?</summary>
+      <div class="answer">
+        <p>Réglages → <em>Restaurer l'achat</em>. Le déblocage appartient à votre identifiant Apple : le
+        restaurer sur un nouvel appareil avec le même identifiant fonctionne. Si rien ne se passe, vérifiez que
+        vous êtes connecté à l'App Store avec le compte utilisé pour l'achat, puis réessayez avec une connexion
+        réseau.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Puis-je obtenir un remboursement ?</summary>
+      <div class="answer">
+        <p>Les remboursements sont gérés par Apple, pas par nous : rendez-vous sur
+        <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>, connectez-vous et choisissez
+        l'achat. Nous ne pouvons ni émettre ni annuler un paiement App Store.</p>
+      </div>
+    </details>
+
+    <h2>Vos données</h2>
+
+    <details class="faq">
+      <summary>Où sont stockées mes données ?</summary>
+      <div class="answer">
+        <p>Uniquement sur votre iPhone, dans l'app. Il n'y a ni compte ni serveur : rien n'est envoyé et nous ne
+        pouvons pas voir votre journal. Le widget de l'écran d'accueil garde les heures de début et de fin d'une
+        nuit dans un petit espace partagé par l'app et le widget sur le même appareil — rien de plus. Tous les
+        détails sont dans la <a href="index.fr.html">politique de confidentialité</a>.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Comment sauvegarder et passer à un nouveau téléphone ?</summary>
+      <div class="answer">
+        <p>Réglages → <em>Exporter une sauvegarde (JSON)</em> crée un fichier JSON et ouvre la feuille de
+        partage ; enregistrez-le dans Fichiers, iCloud Drive ou un endroit de confiance. Sur le nouveau
+        téléphone, installez SleepHabit, puis Réglages → <em>Importer une sauvegarde</em> et choisissez ce
+        fichier.</p>
+        <p>L'import <strong>remplace</strong> tout ce qui est actuellement dans l'app — c'est une restauration,
+        pas une fusion — et l'app demande confirmation avant d'écrire. Un fichier qui échoue à la validation est
+        refusé et vos données existantes restent intactes.</p>
+        <p>Si vous utilisez la sauvegarde iCloud ou une sauvegarde sur ordinateur, les données de l'app peuvent
+        aussi y figurer, gérées par iOS.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Comment tout supprimer ?</summary>
+      <div class="answer">
+        <p>Supprimez les nuits une à une depuis l'historique, ou supprimez l'app pour retirer toutes les nuits et
+        réglages d'un coup. Comme rien n'est stocké sur un serveur, la suppression est immédiate et il ne reste
+        aucune copie à effacer de notre côté. Exportez une sauvegarde avant, si vous pourriez vouloir ces
+        données plus tard.</p>
+      </div>
+    </details>
+
+    <h2>Rappels</h2>
+
+    <details class="faq">
+      <summary>Quand le rappel arrive-t-il ?</summary>
+      <div class="answer">
+        <p>Par défaut à 8 h 30, et vous pouvez changer l'heure ou le désactiver dans les réglages. L'app
+        programme une semaine de rappels ponctuels qui ignorent toute nuit déjà saisie : il cesse donc
+        d'insister dès que votre nuit est enregistrée.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Je ne reçois pas de notifications.</summary>
+      <div class="answer">
+        <p>Vérifiez trois choses : l'interrupteur est actif dans les réglages de SleepHabit ; les notifications
+        sont autorisées pour SleepHabit dans Réglages iOS → Notifications ; et aucun mode Concentration ni
+        « Ne pas déranger » ne les retient. Si l'autorisation a été refusée plus tôt, réactivez-la dans les
+        réglages iOS et l'app la prendra en compte à la prochaine programmation.</p>
+      </div>
+    </details>
+
+    <h2>Langue</h2>
+
+    <details class="faq">
+      <summary>Comment changer la langue ?</summary>
+      <div class="answer">
+        <p>Réglages → Langue. Choisissez Français, English, English (UK) ou Deutsch : l'app se redessine
+        aussitôt — sans redémarrage, et vous restez dans l'onglet « Réglages ». <em>Système</em> conserve la
+        langue de votre iPhone. L'anglais (Royaume-Uni) est un choix distinct de l'anglais, pour que les dates
+        aient le jour en premier et les heures sur 24. Le widget de l'écran d'accueil se dessine dans la même
+        langue que l'app.</p>
+        <p>Le changement de langue est gratuit sur les deux niveaux. L'achat unique ouvre des fenêtres d'analyse
+        plus longues, pas des langues — il n'y a rien à acheter pour lire l'app en français ou en allemand.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>En quelles langues SleepHabit existe-t-il ?</summary>
+      <div class="answer">
+        <p>Français, anglais (États-Unis), anglais (Royaume-Uni) et allemand. Cela couvre toute l'app —
+        libellés, phrases d'analyse, messages de saisie, la notification de rappel et le widget. Cette page
+        d'assistance et la politique de confidentialité existent elles aussi en français, en anglais et en
+        allemand.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Le choix de la langue modifie-t-il mes données ?</summary>
+      <div class="answer">
+        <p>Non. Il change seulement l'affichage. Vos nuits, facteurs et notes restent inchangés, une sauvegarde
+        exportée est du JSON neutre, et rien à propos de ce choix ne quitte l'appareil.</p>
+      </div>
+    </details>
+
+    <h2>Résolution de problèmes</h2>
+
+    <details class="faq">
+      <summary>Le bouton « Enregistrer » est grisé.</summary>
+      <div class="answer">
+        <p>« Enregistrer » reste désactivé tant que la nuit est invalide. Causes habituelles : l'heure du lever
+        est antérieure à celle du coucher ou trop proche (une nuit doit durer au moins une heure), ou la note
+        dépasse 280 caractères. Le formulaire indique la règle qui bloque.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>J'ai réinstallé l'app et mon historique a disparu.</summary>
+      <div class="answer">
+        <p>Supprimer une app efface ses données locales : c'est le revers de tout garder sur l'appareil. Si vous
+        aviez exporté une sauvegarde, importez-la depuis les réglages. Si la sauvegarde iCloud était active,
+        restaurer la sauvegarde de l'appareil peut ramener les données de l'app.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>SleepHabit a-t-il besoin d'Internet ?</summary>
+      <div class="answer">
+        <p>Non. La saisie, l'historique et les analyses fonctionnent hors ligne. Le réseau ne sert qu'à StoreKit,
+        quand vous débloquez ou restaurez l'achat.</p>
+      </div>
+    </details>
+
+    <h2>Appareils</h2>
+
+    <details class="faq">
+      <summary>Sur quels appareils fonctionne SleepHabit ?</summary>
+      <div class="answer">
+        <p>iPhone, iOS 18 ou ultérieur, en portrait uniquement. Sur un iPhone Duo, l'écran intérieur plus large
+        est vraiment utilisé : les cartes se répartissent en deux colonnes au lieu d'une seule longue colonne
+        étirée sur toute la largeur.</p>
+        <p>C'est une app iPhone : sur iPad et sur Mac à puce Apple, l'App Store l'installe en mode de
+        compatibilité, où elle tourne dans une fenêtre au format iPhone, en portrait.</p>
+      </div>
+    </details>
+
+    <h2>Toujours bloqué ?</h2>
+    <p>Écrivez à <a href="mailto:vegaodm@outlook.com?subject=SleepHabit%20support">vegaodm@outlook.com</a> avec
+    votre version d'iOS, la version de l'app (Réglages → À propos) et une brève description du problème. Les
+    rapports de bug comme les suggestions sont bienvenus.</p>
+    <p class="contact">Nous lisons tout, et nous répondons.</p>
+  </main>
+
+  <footer>
+    <span>SleepHabit · Trouvez ce qui gâche votre sommeil.</span>
+    <span><a href="index.fr.html">Politique de confidentialité</a> · <a href="mailto:vegaodm@outlook.com">Contact</a></span>
+  </footer>
+</div>
+</body>
+</html>

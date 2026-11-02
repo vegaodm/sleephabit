@@ -7,6 +7,10 @@
 <meta name="theme-color" content="#4f46e5">
 <title>Privacy Policy · SleepHabit</title>
 <meta name="description" content="SleepHabit keeps your sleep log on your iPhone. No account, no server, no analytics, no tracking. Read the full privacy policy.">
+<link rel="alternate" hreflang="en" href="https://vegaodm.github.io/sleephabit/index.html">
+<link rel="alternate" hreflang="de" href="https://vegaodm.github.io/sleephabit/index.de.html">
+<link rel="alternate" hreflang="fr" href="https://vegaodm.github.io/sleephabit/index.fr.html">
+<link rel="alternate" hreflang="x-default" href="https://vegaodm.github.io/sleephabit/index.html">
 <style>
   :root {
     color-scheme: light dark;
@@ -56,6 +60,8 @@
   }
   nav.top a:hover, nav.top a:focus-visible { color: var(--ink); border-color: var(--accent); }
   nav.top a[aria-current="page"] { color: var(--accent); border-color: var(--accent); }
+  .navrow { display: flex; gap: 6px 8px; flex-wrap: wrap; align-items: center; }
+  nav.top.langs a { font-size: 13px; }
   h1 { font-size: 1.9rem; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 10px; }
   .meta { color: var(--muted); font-size: 0.9rem; margin: 0 0 26px; }
   h2 { font-size: 1.18rem; letter-spacing: -0.01em; margin: 38px 0 10px; }
@@ -107,10 +113,17 @@
       </svg>
       <span>SleepHabit</span>
     </div>
-    <nav class="top" aria-label="Site">
-      <a href="index.html" aria-current="page">Privacy</a>
-      <a href="support.html">Support</a>
-    </nav>
+    <div class="navrow">
+      <nav class="top" aria-label="Site">
+        <a href="index.html" aria-current="page">Privacy</a>
+        <a href="support.html">Support</a>
+      </nav>
+      <nav class="top langs" aria-label="Language">
+        <a href="index.html" lang="en" hreflang="en" aria-current="page">English</a>
+        <a href="index.de.html" lang="de" hreflang="de">Deutsch</a>
+        <a href="index.fr.html" lang="fr" hreflang="fr">Français</a>
+      </nav>
+    </div>
   </header>
 
   <main>
@@ -135,7 +148,7 @@
     the device, and what we do with it — which is nothing, because we never receive your data.</p>
     <p>The app ships in English (United States and United Kingdom), German and French, and Settings lets you
     switch between them without leaving the app. The choice is stored on the device and nothing about it is
-    sent anywhere.</p>
+    sent anywhere. This policy is published in English, German and French — the links are in the header.</p>
 
     <h2>2. Data we collect</h2>
     <p><span class="pill">Data Not Collected</span></p>

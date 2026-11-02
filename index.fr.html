@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index">
+<meta name="theme-color" content="#4f46e5">
+<title>Politique de confidentialité · SleepHabit</title>
+<meta name="description" content="SleepHabit garde votre journal de sommeil sur votre iPhone. Aucun compte, aucun serveur, aucune analyse, aucun pistage. Lisez la politique de confidentialité complète.">
+<link rel="alternate" hreflang="en" href="https://vegaodm.github.io/sleephabit/index.html">
+<link rel="alternate" hreflang="de" href="https://vegaodm.github.io/sleephabit/index.de.html">
+<link rel="alternate" hreflang="fr" href="https://vegaodm.github.io/sleephabit/index.fr.html">
+<link rel="alternate" hreflang="x-default" href="https://vegaodm.github.io/sleephabit/index.html">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f7f7fb;
+    --card: #ffffff;
+    --ink: #16161d;
+    --muted: #5c5c6e;
+    --line: #e4e4ee;
+    --accent: #4f46e5;
+    --accent-soft: #eef0ff;
+    --code: #f2f2f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f0f14;
+      --card: #17171f;
+      --ink: #f2f2f7;
+      --muted: #a1a1b3;
+      --line: #2a2a36;
+      --accent: #a5b4fc;
+      --accent-soft: #1e1e2e;
+      --code: #20202b;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+          "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    padding: 0 20px 64px;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; }
+  header.site {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    align-items: center; justify-content: space-between;
+    padding: 22px 0 18px; border-bottom: 1px solid var(--line); margin-bottom: 28px;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 650; letter-spacing: -0.01em; }
+  .brand svg { width: 22px; height: 22px; color: var(--accent); }
+  nav.top { display: flex; gap: 6px; flex-wrap: wrap; }
+  nav.top a {
+    color: var(--muted); text-decoration: none; font-size: 14px;
+    padding: 6px 11px; border-radius: 999px; border: 1px solid var(--line);
+  }
+  nav.top a:hover, nav.top a:focus-visible { color: var(--ink); border-color: var(--accent); }
+  nav.top a[aria-current="page"] { color: var(--accent); border-color: var(--accent); }
+  .navrow { display: flex; gap: 6px 8px; flex-wrap: wrap; align-items: center; }
+  nav.top.langs a { font-size: 13px; }
+  h1 { font-size: 1.9rem; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 10px; }
+  .meta { color: var(--muted); font-size: 0.9rem; margin: 0 0 26px; }
+  h2 { font-size: 1.18rem; letter-spacing: -0.01em; margin: 38px 0 10px; }
+  h3 { font-size: 1rem; margin: 22px 0 6px; }
+  p, li { color: var(--ink); }
+  ul { padding-left: 22px; }
+  li { margin: 5px 0; }
+  a { color: var(--accent); }
+  .lede {
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+    padding: 18px 20px; margin: 0 0 8px;
+  }
+  .lede p { margin: 0; }
+  .lede strong { color: var(--ink); }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0 6px; font-size: 0.94rem; }
+  caption { text-align: left; color: var(--muted); font-size: 0.86rem; padding-bottom: 6px; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  tbody tr:last-child td { border-bottom: none; }
+  .tablecard { background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+  code {
+    background: var(--code); border-radius: 6px; padding: 1px 6px;
+    font-size: 0.88em; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  .pill {
+    display: inline-block; background: var(--accent-soft); color: var(--accent);
+    border-radius: 999px; padding: 2px 10px; font-size: 0.8rem; font-weight: 600;
+  }
+  .contact { font-weight: 600; }
+  footer {
+    max-width: 780px; margin: 56px auto 0; padding-top: 20px;
+    border-top: 1px solid var(--line); color: var(--muted); font-size: 0.86rem;
+    display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: space-between;
+  }
+  footer a { color: var(--muted); }
+  footer a:hover { color: var(--ink); }
+  @media (max-width: 520px) {
+    th, td { padding: 9px 8px; }
+    h1 { font-size: 1.6rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+        <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" stroke-linejoin="round"/>
+      </svg>
+      <span>SleepHabit</span>
+    </div>
+    <div class="navrow">
+      <nav class="top" aria-label="Site">
+        <a href="index.fr.html" aria-current="page">Confidentialité</a>
+        <a href="support.fr.html">Assistance</a>
+      </nav>
+      <nav class="top langs" aria-label="Langue">
+        <a href="index.html" lang="en" hreflang="en">English</a>
+        <a href="index.de.html" lang="de" hreflang="de">Deutsch</a>
+        <a href="index.fr.html" lang="fr" hreflang="fr" aria-current="page">Français</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Politique de confidentialité</h1>
+    <p class="meta">SleepHabit pour iPhone · Dernière mise à jour le 2 novembre 2026</p>
+
+    <div class="lede">
+      <p><strong>En bref :</strong> SleepHabit garde votre journal de sommeil sur votre iPhone. Aucun compte,
+      aucun serveur chez nous, aucune analyse, aucune publicité et aucun pistage. Ce que vous notez ne nous
+      parvient jamais — nous n'avons aucun moyen de le lire.</p>
+    </div>
+
+    <h2>1. Ce qu'est SleepHabit</h2>
+    <p>SleepHabit est un journal de sommeil. Chaque nuit, vous indiquez l'heure du coucher, l'heure du lever,
+    le nombre de réveils et votre forme (1–5). Pour la journée qui précède, vous pouvez marquer la caféine,
+    l'alcool, le sport, le stress, les écrans ou une sieste, avec un moment de la journée approximatif.
+    L'app compare ensuite vos propres nuits et décrit les régularités qu'elle trouve.</p>
+    <p>Il y a aussi un widget pour l'écran d'accueil : touchez <em>Démarrer</em> au coucher et <em>Arrêter</em>
+    au réveil, et ces deux heures sont notées — vous n'avez rien à retenir. À la prochaine ouverture, l'app en
+    fait une nuit normale : mêmes données, même endroit.</p>
+    <p>Tous ces calculs se font sur votre appareil. Cette politique explique ce que l'app enregistre, ce qui
+    quitte l'appareil et ce que nous en faisons — c'est-à-dire rien, puisque nous ne recevons jamais vos
+    données.</p>
+    <p>L'app existe en français, en anglais (États-Unis et Royaume-Uni) et en allemand ; les réglages
+    permettent de changer de langue sans quitter l'app. Ce choix reste sur l'appareil et rien n'en est envoyé.
+    Cette politique existe elle aussi en français, en anglais et en allemand.</p>
+
+    <h2>2. Données que nous collectons</h2>
+    <p><span class="pill">Aucune donnée collectée</span></p>
+    <p>Nous ne collectons aucune donnée personnelle. Il n'y a pas d'inscription, pas de synchronisation iCloud
+    dans cette version, pas de serveur et pas de base d'utilisateurs : il n'existe donc chez nous aucun endroit
+    où vos informations pourraient être conservées.</p>
+    <ul>
+      <li>Aucun SDK d'analyse, de télémétrie, de rapport de plantage ou de publicité.</li>
+      <li>Aucun identifiant publicitaire (IDFA) et aucun pistage entre applis ou sites.</li>
+      <li>Aucun accès à HealthKit, à la localisation, aux contacts, aux photos, au micro ou à l'appareil photo.</li>
+      <li>Aucune bibliothèque tierce : pas une seule n'est intégrée à l'app.</li>
+    </ul>
+
+    <h2>3. Ce que l'app enregistre sur votre appareil</h2>
+    <p>Tout ce qui suit se trouve dans l'espace isolé de l'app, sur votre iPhone. Rien n'est envoyé par
+    l'app.</p>
+    <div class="tablecard">
+      <table>
+        <caption>Stocké localement ; seuls SleepHabit et son widget sur votre appareil peuvent le lire</caption>
+        <thead>
+          <tr><th scope="col">Quoi</th><th scope="col">Contenu</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nuits</td>
+            <td>Date de la nuit, heure du coucher, heure du lever, nombre de réveils, énergie de 1 à 5, une
+            note facultative (280 caractères au plus) et les facteurs choisis avec leur moment de la
+            journée.</td>
+          </tr>
+          <tr>
+            <td>Réglages de l'app</td>
+            <td>Si vous avez terminé la présentation, si le rappel quotidien est actif et à quelle heure, la
+            langue choisie dans les réglages, et un indicateur mémorisé attestant que vous avez débloqué les
+            fonctions payantes — pour que le déblocage fonctionne aussi hors ligne.</td>
+          </tr>
+          <tr>
+            <td>Passage par le widget</td>
+            <td>Si vous utilisez le widget : l'heure du toucher sur <em>Démarrer</em> et celle du toucher sur
+            <em>Arrêter</em>. Rien d'autre — ni facteur, ni énergie, ni note. Cela vit dans un petit espace que
+            l'app et son propre widget partagent sur le même appareil, et c'est remplacé par la nuit suivante
+            que vous notez.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Les nuits restent jusqu'à ce que vous les supprimiez ou désinstalliez l'app. Les notes sont
+    facultatives et vous appartiennent — évitez d'y écrire ce que vous ne voudriez pas voir dans un simple
+    fichier texte, car un export <em>est</em> un simple fichier texte.</p>
+
+    <h2>4. Ce qui quitte votre appareil</h2>
+    <p>L'app n'a aucun serveur à contacter. Les données circulent dans exactement deux situations, et vous en
+    êtes à chaque fois à l'origine.</p>
+    <div class="tablecard">
+      <table>
+        <caption>Liste complète des flux sortants</caption>
+        <thead>
+          <tr><th scope="col">Situation</th><th scope="col">Ce qui est envoyé</th><th scope="col">À qui</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Vous touchez <em>Débloquer</em> ou <em>Restaurer l'achat</em></td>
+            <td>La demande d'achat et votre session App Store, gérées par StoreKit. Aucune donnée de sommeil
+            n'y figure.</td>
+            <td>Apple, sous votre identifiant Apple et selon la politique de confidentialité d'Apple.</td>
+          </tr>
+          <tr>
+            <td>Vous touchez <em>Exporter la sauvegarde</em></td>
+            <td>Un fichier JSON contenant toutes vos nuits, que la feuille de partage du système remet à la
+            destination que vous choisissez (Fichiers, AirDrop, Mail, etc.).</td>
+            <td>L'app ou le service que vous choisissez. Nous n'y participons pas et ne recevons rien.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>C'est la liste complète. L'app ne fait aucune autre requête réseau : pas de récupération de
+    configuration, pas de réglages à distance, pas de contenu distant et pas de vérification de mise à jour
+    maison.</p>
+    <p><strong>À propos du fichier d'export.</strong> La sauvegarde est du JSON non chiffré, pour rester
+    lisible et transportable. Traitez-la comme tout document contenant des notes personnelles et gardez-la
+    dans un endroit de confiance. Importer une sauvegarde remplace toutes les nuits présentes dans l'app ;
+    l'app demande confirmation avant.</p>
+
+    <h2>5. Notifications</h2>
+    <p>Le rappel quotidien est une notification locale programmée par iOS sur votre appareil. Il n'y a pas de
+    serveur de notifications et aucun contenu ne quitte votre téléphone. Si vous activez les rappels, l'app
+    demande l'autorisation à iOS une seule fois ; vous pouvez les désactiver à tout moment dans les réglages
+    de l'app ou dans les réglages d'iOS.</p>
+
+    <h2>6. Sauvegardes de l'appareil</h2>
+    <p>SleepHabit n'envoie pas vos données, mais si vous utilisez la sauvegarde iCloud ou une sauvegarde sur
+    ordinateur, iOS peut inclure les données de l'app dans cette sauvegarde. Ce transfert est effectué par
+    Apple sous votre identifiant Apple et vos réglages de sauvegarde, et relève de la politique de
+    confidentialité d'Apple, pas de cette app. Vous pouvez consulter ou désactiver les sauvegardes dans les
+    réglages d'iOS.</p>
+
+    <h2>7. Votre contrôle et la suppression</h2>
+    <ul>
+      <li><strong>Modifier une nuit :</strong> ouvrez-la depuis « Aujourd'hui » ou « Historique » et changez
+      n'importe quelle valeur.</li>
+      <li><strong>Supprimer une nuit :</strong> balayez la ligne vers la gauche dans l'historique, ou utilisez
+      « Supprimer » dans la nuit elle-même.</li>
+      <li><strong>Tout supprimer :</strong> désinstaller l'app efface tout son espace de stockage — nuits,
+      réglages et indicateur de déblocage.</li>
+      <li><strong>Garder une copie :</strong> Réglages → Exporter la sauvegarde, avant de supprimer quoi que
+      ce soit.</li>
+    </ul>
+    <p>Comme nous ne recevons jamais vos données, il n'existe aucune copie côté serveur à demander, corriger ou
+    effacer, et aucune donnée à vous que nous pourrions transmettre. La suppression dans l'app est immédiate
+    et définitive ; seules subsistent les copies que vous avez exportées ou qu'iOS a faites dans une sauvegarde
+    de l'appareil.</p>
+
+    <h2>8. Comment les analyses sont calculées</h2>
+    <p>Les analyses sont de simples statistiques sur votre propre journal, calculées sur votre appareil. Pour
+    rester honnêtes, elles ne s'affichent que s'il y a assez de données et si l'écart est assez grand pour
+    compter.</p>
+    <ul>
+      <li><strong>Gratuit :</strong> une fenêtre de 14 jours (7 jours est aussi possible), au moins 3 nuits
+      avec et 3 sans le facteur, et au moins 5 nuits notées au total.</li>
+      <li><strong>Débloqué :</strong> 14, 30, 90, 365 jours ou toute la période, au moins 5 nuits avec et 5
+      sans, et au moins 14 nuits notées au total.</li>
+      <li><strong>Seuil de bruit :</strong> 15 minutes de décalage, 0,5 réveil nocturne ou 0,3 point
+      d'énergie. En dessous, l'app se tait plutôt que d'inventer une régularité.</li>
+    </ul>
+    <p><strong>Les résultats sont des associations, pas des causes.</strong> SleepHabit n'est pas un
+    dispositif médical et ne diagnostique, ne traite, ne guérit ni ne prévient aucune affection. Si vous avez
+    un problème de sommeil, parlez-en à un professionnel de santé.</p>
+
+    <h2>9. Tiers</h2>
+    <p>Le seul tiers impliqué est Apple : l'App Store et StoreKit pour l'achat unique, et iOS lui-même pour le
+    stockage, les notifications et la feuille de partage. Aucun fournisseur d'analyse, aucune régie publicitaire,
+    aucun service de rapports de plantage, aucun courtier de données. Nous ne vendons ni ne partageons
+    d'informations personnelles, parce que nous n'en avons aucune.</p>
+
+    <h2>10. Enfants</h2>
+    <p>SleepHabit est une app grand public, qui ne s'adresse pas aux enfants de moins de 13 ans. Nous ne
+    collectons pas sciemment de données auprès d'enfants — ni auprès de quiconque, puisque l'app ne collecte
+    aucune donnée.</p>
+
+    <h2>11. Sécurité</h2>
+    <p>Votre journal se trouve dans l'espace isolé de l'app, protégé par le chiffrement d'iOS et le code de
+    votre appareil. L'app ne stocke aucun identifiant et n'implémente aucune cryptographie. Le risque pratique
+    pour vos données est au niveau de l'appareil : gardez un code actif, tenez iOS à jour et réfléchissez à
+    deux fois avant d'envoyer une sauvegarde exportée.</p>
+
+    <h2>12. Modifications de cette politique</h2>
+    <p>Si le comportement de l'app change d'une manière qui touche à la vie privée — par exemple si une
+    version future ajoute une synchronisation iCloud facultative — cette page sera mise à jour et la date en
+    haut changera, les changements importants étant signalés dans les notes de version de l'app. Continuer à
+    utiliser l'app après une mise à jour vaut acceptation de la politique révisée. Cette version décrit
+    SleepHabit 1.0.4.</p>
+
+    <h2>13. Contact</h2>
+    <p>Questions sur cette politique ou sur la façon dont l'app traite les données :</p>
+    <p class="contact"><a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a></p>
+  </main>
+
+  <footer>
+    <span>SleepHabit · Trouvez ce qui gâche votre sommeil.</span>
+    <span><a href="support.fr.html">Assistance</a> · <a href="https://www.apple.com/legal/privacy/fr-ww/">Confidentialité Apple</a></span>
+  </footer>
+</div>
+</body>
+</html>

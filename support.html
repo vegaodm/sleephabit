@@ -7,6 +7,10 @@
 <meta name="theme-color" content="#4f46e5">
 <title>Support · SleepHabit</title>
 <meta name="description" content="Help with SleepHabit: logging nights, understanding insights, the one-time unlock, backups, reminders and how to reach us.">
+<link rel="alternate" hreflang="en" href="https://vegaodm.github.io/sleephabit/support.html">
+<link rel="alternate" hreflang="de" href="https://vegaodm.github.io/sleephabit/support.de.html">
+<link rel="alternate" hreflang="fr" href="https://vegaodm.github.io/sleephabit/support.fr.html">
+<link rel="alternate" hreflang="x-default" href="https://vegaodm.github.io/sleephabit/support.html">
 <style>
   :root {
     color-scheme: light dark;
@@ -56,6 +60,8 @@
   }
   nav.top a:hover, nav.top a:focus-visible { color: var(--ink); border-color: var(--accent); }
   nav.top a[aria-current="page"] { color: var(--accent); border-color: var(--accent); }
+  .navrow { display: flex; gap: 6px 8px; flex-wrap: wrap; align-items: center; }
+  nav.top.langs a { font-size: 13px; }
   h1 { font-size: 1.9rem; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 10px; }
   .meta { color: var(--muted); font-size: 0.9rem; margin: 0 0 26px; }
   h2 { font-size: 1.18rem; letter-spacing: -0.01em; margin: 40px 0 6px; }
@@ -128,10 +134,17 @@
       </svg>
       <span>SleepHabit</span>
     </div>
-    <nav class="top" aria-label="Site">
-      <a href="index.html">Privacy</a>
-      <a href="support.html" aria-current="page">Support</a>
-    </nav>
+    <div class="navrow">
+      <nav class="top" aria-label="Site">
+        <a href="support.html" aria-current="page">Support</a>
+        <a href="index.html">Privacy</a>
+      </nav>
+      <nav class="top langs" aria-label="Language">
+        <a href="support.html" lang="en" hreflang="en" aria-current="page">English</a>
+        <a href="support.de.html" lang="de" hreflang="de">Deutsch</a>
+        <a href="support.fr.html" lang="fr" hreflang="fr">Français</a>
+      </nav>
+    </div>
   </header>
 
   <main>
@@ -436,8 +449,9 @@
       <summary>Which languages does SleepHabit ship in?</summary>
       <div class="answer">
         <p>English (United States), English (United Kingdom), German and French. That covers the whole app —
-        labels, insight sentences, validation messages, the reminder notification and the widget. This
-        support page and the privacy policy are English only.</p>
+        labels, insight sentences, validation messages, the reminder notification and the widget. This support
+        page and the privacy policy are published in all three languages too: use the language links in the
+        header, or Settings → Language in the app, and the link opens the matching version.</p>
       </div>
     </details>
 
